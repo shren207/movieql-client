@@ -1,8 +1,16 @@
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Movies from "./routes/Movies";
+import Movie from "./routes/Movie";
 import React from 'react';
 
 function App() {
   return (
-    <div></div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Movies />} />
+        <Route path="/movies/:id" element={<Movie />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
